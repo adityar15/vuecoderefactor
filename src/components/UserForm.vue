@@ -55,6 +55,7 @@ function submitForm() {
     errors.fullname = "Name is required"
     return
   }
+  console.log("user", user)
   emit("submit", user);
 }
 

@@ -2,16 +2,16 @@
       <input
         v-bind="$attrs"
         class="input"
-        :value="modelValue"
-        @input="$emit('update:modelValue', $event.target.value)"
+        v-model="model"
       />
 </template>
 
 <script setup>
-defineProps({
-    modelValue: String | Number
-})
-const emit = defineEmits(["update:modelValue"])
+// defineProps({
+//     modelValue: String | Number
+// })
+// const emit = defineEmits(["update:modelValue"])
+const model = defineModel()
 </script>
 
 <style scoped>
